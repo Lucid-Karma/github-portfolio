@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>beyzanur ozen - Portfolio Details - Play Civic Connect</title>
+  <title>beyzanur ozen - fsm -PIdleState Codes</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -34,6 +34,13 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <!--Syntax Highlighting/Prim.js -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+
+
 </head>
 
 <body>
@@ -58,10 +65,8 @@
       <nav id="navbar" class="nav-menu navbar">
         <ul>
             <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-            <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-            <li><a href="index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-            <li><a href="index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
             <li><a href="Docs.html" class="nav-link scrollto"><i class="bx bx-book"></i> <span>Docs</span></a></li>
+            <li><a href="https://github.com/Lucid-Karma/Lost-RPG" class="nav-link scrollto"><i class="bx bxl-github"></i> <span>See on GitHub</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -69,88 +74,63 @@
 
   <main id="main">
 
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+  
+          <div class="d-flex justify-content-between align-items-center">
+            <h2>PIdleState Codes</h2>
+            <ol>
+                <li><a href="FsmDocumentation.html">Doc</a></li>
+              <li><a href="https://github.com/Lucid-Karma/Lost-RPG">See Repo </a></li>
+            </ol>
+          </div>
+  
+        </div>
+      </section><!-- End Breadcrumbs -->
+
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Play Game</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Play Civic Connect</li>
-          </ol>
-        </div>
+        <pre><code class="language-csharp">
+    using UnityEngine;
 
-      </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Play Section ======= -->
-    <section id="play" class="play">
-        <div class="container">
-  
-          <div class="row" data-aos="fade-in">
-  
-            <iframe src="WebGL_Build_Multiplayer/index.html" width="800" height="650"></iframe>
-  
-          </div>
-  
-        </div>
-      </section><!-- End Play Section -->
-
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/CivicConnect/Multiplayer/Image Sequence_002_0000.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/CivicConnect/Multiplayer/Image Sequence_003_0000.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/CivicConnect/Multiplayer/Image Sequence_005_0000.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="assets/img/portfolio/CivicConnect/image_010_0000.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="assets/img/portfolio/CivicConnect/image_011_0000.jpg" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <!-- <div class="controls">
-              <h3>Controls</h3>
-              <p>
-                Mouse
-              </p>
-            </div> -->
-            <div class="portfolio-description">
-              <h2>How To Play</h2>
-              <p>
-                Use left click to rotate roads. Connect all of them and revive city. 
-                You can use right mouse button down to see different angles. <br><br>
-                If there are others on the network, you can also play against them using the Challenge button.<br><br>
-                If you have enough point (50pts), you can buy solve rights and use them whenever you want.
-                This is the only way to finish a level if you struggle with it, but if you want to cheat, 
-                each time you restart the game, there is going to be a different puzzle for the current level. 
-              </p>
-            </div>
-          </div>
+    public class PIdleState : PlayerStates
+    {
+        public override void EnterState(PlayerController fsm)
+        {
+            fsm.StopPlayer();
+            fsm.OnPlayerIdle.Invoke();
+            fsm.HandleInteract();
+        }
+    
+        public override void UpdateState(PlayerController fsm)
+        {
+            if(fsm.executingPlayerState == ExecutingPlayerState.IDLE)
+            {   
+    
+            }
+            else
+                ExitState(fsm);
+        }
+    
+        public override void ExitState(PlayerController fsm)
+        {
+            if (fsm.executingPlayerState == ExecutingPlayerState.WALK)
+                fsm.SwitchState(fsm.walkState);
+            else if (fsm.executingPlayerState == ExecutingPlayerState.ATTACK)
+                fsm.SwitchState(fsm.attackState);
+            else if (fsm.executingPlayerState == ExecutingPlayerState.INTERACT)
+                fsm.SwitchState(fsm.interactState);
+            else if (fsm.executingPlayerState == ExecutingPlayerState.DIALOGUE)
+                fsm.SwitchState(fsm.dialogueState);
+            else if (fsm.executingPlayerState == ExecutingPlayerState.QUEST)
+                fsm.SwitchState(fsm.questState);
+            else if (fsm.executingPlayerState == ExecutingPlayerState.SHOP)
+                fsm.SwitchState(fsm.shoppingState);
+        }
+    }
+    </code></pre>
 
         </div>
 

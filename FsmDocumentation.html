@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>beyzanur ozen Wave Function Collapse Generator (For Procedural Level Generation)</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <!--Syntax Highlighting/Prim.js -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+
+  <style>
+    /* Top Button Styles */
+    .top-button {
+        position: fixed;
+        bottom: 20px; /* Ekranın altından mesafe */
+        right: 20px; /* Ekranın sağından mesafe */
+        background-color: #007bff; /* Butonun arka plan rengi */
+        color: white; /* Butonun yazı rengi */
+        border-radius: 50%; /* Yuvarlak buton */
+        width: 50px; /* Butonun genişliği */
+        height: 50px; /* Butonun yüksekliği */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 24px; /* İkonun boyutu */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+        transition: background-color 0.3s; /* Renk değişimi efekti */
+        display: none; /* Başlangıçta gizle */
+    }
+
+    .top-button:hover {
+        background-color: #0056b3; /* Üzerine gelindiğinde arka plan rengi */
+    }
+
+    .top-button i {
+        margin: 0; /* İkonun etrafındaki boşluğu kaldırır */
+    }
+</style>
+
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Beyzanur Özen</a></h1>
+        <div class="social-links mt-3 text-center">
+            <a href="https://github.com/Lucid-Karma" class="github"><i class="bx bxl-github"></i></a>
+            <a href="https://www.instagram.com/kodadika/" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/beyzanur-%C3%B6zen-9632b6200/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+            <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+            <li><a href="PIdleStateCodes.html" class="nav-link scrollto"><i class="bx bx-code-block"></i> <span>PIdleState Codes</span></a></li>
+            <li><a href="Docs.html" class="nav-link scrollto"><i class="bx bx-book"></i> <span>Docs</span></a></li>
+            <li><a href="https://github.com/Lucid-Karma/Lost-RPG" class="nav-link scrollto"><i class="bx bxl-github"></i> <span>See on GitHub</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h2>Character AI</h2>
+                <h5>(Finite State Machine For Player and NPCs)</h5>
+              </div>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://github.com/Lucid-Karma/Lost-RPG">See Repo </a></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+            <h2>Overview</h2>
+            <p>
+                The FSM system is designed to manage state transitions for game entities, such as the player and NPCs. This system is implemented using C# and is structured around an interface for states and a base FSM class to handle state management. It provides flexibility, modularity, and scalability, allowing easy extension and reuse across different game objects.
+            </p>
+        
+            <div class="toc">
+                <h2>Table of Contents</h2>
+                <ul>
+                    <li><a href="#istates-interface">IStates Interface</a></li>
+                    <li><a href="#fsmbase-class">FSMBase Abstract Class</a></li>
+                    <li><a href="#playerstates-class">PlayerStates Abstract Class</a></li>
+                    <li><a href="#pwalkstate-class">Sample State (PWalkState Class)</a></li>
+                    <li><a href="#executingplayerstate-enum">ExecutingPlayerState Enum</a></li>
+                    <li><a href="#playercontroller-class">PlayerController Class</a></li>
+                    <li><a href="#conclusion">Conclusion</a></li>
+                </ul>
+            </div>
+            
+            
+            <h2 id="istates-interface">IStates Interface</h2>
+            <pre><code class="language-csharp">
+            public interface IStates&lt;T&gt; where T : MonoBehaviour 
+            {
+                void EnterState(T fsm);
+                void UpdateState(T fsm);
+                void ExitState(T fsm);
+            }
+            </code></pre>
+            <p><strong>Purpose:</strong> Defines the basic contract for all states. Any state implementing this interface must define behavior for entering, updating, and exiting the state.</p>
+            <p><strong>Methods:</strong></p>
+            <ul>
+                <li><code>EnterState(T fsm)</code>: Called when a state is first entered.</li>
+                <li><code>UpdateState(T fsm)</code>: Called every frame the state is active.</li>
+                <li><code>ExitState(T fsm)</code>: Called when transitioning out of the state.</li>
+            </ul>
+            
+            <h2 id="fsmbase-class">FSMBase Abstract Class</h2>
+            <pre><code class="language-csharp">
+            public abstract class FSMBase&lt;T&gt; : MonoBehaviour where T : FSMBase&lt;T&gt;
+            {
+                private IStates&lt;T&gt; currentState;
+            
+                protected void StartState(IStates&lt;T&gt; starterState)
+                {
+                    currentState = starterState;
+                    currentState.EnterState((T)this);
+                }
+            
+                protected virtual void Update()
+                {
+                    currentState.UpdateState((T)this);
+                }
+            
+                public void SwitchState(IStates&lt;T&gt; nextState)
+                {
+                    currentState = nextState;
+                    currentState.EnterState((T)this);
+                }
+            }
+            </code></pre>
+            <p><strong>Purpose:</strong> Provides a base class for any FSM. Manages the current state and handles transitions between states.</p>
+            <p><strong>Methods:</strong></p>
+            <ul>
+                <li><code>StartState(IStates&lt;T&gt; starterState)</code>: Initializes the FSM with a starting state.</li>
+                <li><code>Update()</code>: Updates the current state every frame. Should be called from a derived class.</li>
+                <li><code>SwitchState(IStates&lt;T&gt; nextState)</code>: Transitions from the current state to the next state.</li>
+            </ul>
+            <p><strong>Highlights:</strong> Generics Usage (<code>T : FSMBase&lt;T&gt;</code>): Ensures type safety and flexibility for any FSM-based class.</p>
+            
+            <h2 id="playerstates-class">PlayerStates Abstract Class</h2>
+            <pre><code class="language-csharp">
+            public abstract class PlayerStates : IStates&lt;PlayerController&gt;
+            {
+                public abstract void EnterState(PlayerController fsm);
+                public abstract void UpdateState(PlayerController fsm);
+                public abstract void ExitState(PlayerController fsm);
+            }
+            </code></pre>
+            <p><strong>Purpose:</strong> Serves as a base class for all player-specific states. Implements the <code>IStates</code> interface for <code>PlayerController</code>.</p>
+            <p><strong>Methods:</strong></p>
+            <ul>
+                <li><code>EnterState(PlayerController fsm)</code>: Defines actions when entering the state.</li>
+                <li><code>UpdateState(PlayerController fsm)</code>: Defines behavior while the state is active.</li>
+                <li><code>ExitState(PlayerController fsm)</code>: Handles cleanup or transition logic when exiting the state.</li>
+            </ul>
+            
+            <h2 id="pwalkstate-class">Sample State (PWalkState Class)</h2>
+            <pre><code class="language-csharp">
+            public class PWalkState : PlayerStates
+            {
+                public override void EnterState(PlayerController fsm)
+                {
+                    fsm.OnPlayerWalk.Invoke();
+                }
+            
+                public override void UpdateState(PlayerController fsm)
+                {
+                    if (fsm.executingPlayerState == ExecutingPlayerState.WALK)
+                    {
+                        fsm.DoneWithPath();
+                    }
+                    else
+                    {
+                        ExitState(fsm);
+                    }
+                }
+            
+                public override void ExitState(PlayerController fsm)
+                {
+                    if (fsm.executingPlayerState == ExecutingPlayerState.IDLE)
+                        fsm.SwitchState(fsm.idleState);
+                    else if (fsm.executingPlayerState == ExecutingPlayerState.DIALOGUE)
+                        fsm.SwitchState(fsm.dialogueState);
+                    else if (fsm.executingPlayerState == ExecutingPlayerState.SHOP)
+                        fsm.SwitchState(fsm.shoppingState);
+                    else if (fsm.executingPlayerState == ExecutingPlayerState.QUEST)
+                        fsm.SwitchState(fsm.questState);
+                    else if (fsm.executingPlayerState == ExecutingPlayerState.ATTACK)
+                        fsm.SwitchState(fsm.attackState);
+                }
+            }
+            </code></pre>
+            <p><strong>Purpose:</strong> Represents the "Walk" state of the player. Handles the logic for when the player is walking.</p>
+            <p><strong>Methods:</strong></p>
+            <ul>
+                <li><code>EnterState(PlayerController fsm)</code>: Triggers the <code>OnPlayerWalk</code> event when entering the walk state.</li>
+                <li><code>UpdateState(PlayerController fsm)</code>: Continuously checks if the player should remain in the walk state or transition to another state. If it is walk state, only the methods written inside it will run during the update.</li>
+                <li><code>ExitState(PlayerController fsm)</code>: Transitions to the appropriate state based on the player's current action. It is impossible to switch from this(<code>PWalkState</code>) state to a state other than what is written there.</li>
+            </ul>
+            <p><strong>Highlights:</strong> Event Triggering and State Transition Logic ensure smooth player state management.</p>
+            
+            <h2 id="executingplayerstate-enum">ExecutingPlayerState Enum</h2>
+            <pre><code class="language-csharp">
+            public enum ExecutingPlayerState
+            {
+                IDLE,
+                WALK,
+                SHOP,
+                INTERACT,
+                DIALOGUE,
+                QUEST,
+                ATTACK
+            }
+            </code></pre>
+            <p><strong>Purpose:</strong> Defines the possible states a player can be in, facilitating clear state management and transitions.</p>
+            
+            <h2 id="playercontroller-class">PlayerController Class</h2>
+            <pre><code class="language-csharp">
+            public class PlayerController : FSMBase&lt;PlayerController&gt;
+            {
+                #region FSM
+                public ExecutingPlayerState executingPlayerState;
+
+                public PIdleState idleState = new();
+                public PWalkState walkState = new();
+                public PInteractState interactState = new();
+                public PShoppingState shoppingState = new();
+                public PDialogueState dialogueState = new();
+                public PQuestState questState = new();
+                public PAttackState attackState = new();
+                #endregion   
+            
+                #region Events
+                [HideInInspector]
+                public UnityEvent OnPlayerIdle = new();
+                [HideInInspector]
+                public UnityEvent OnPlayerWalk = new();
+                [HideInInspector]
+                public UnityEvent OnPlayerAttack = new();
+                #endregion
+
+                // Starts with Idle state.
+                void Start()
+                {
+                    EventManager.OnLevelStart.Invoke();
+                    executingPlayerState = ExecutingPlayerState.IDLE;
+
+                    StartState(idleState);
+                }
+            
+                // Method to handle FSM
+                protected override void Update()
+                {
+                    base.Update(); // Updates the current FSM state
+                }
+            
+                public void SwitchState(IStates&lt;PlayerController&gt; nextState)
+                {
+                    base.SwitchState(nextState);
+                }
+            
+                public void DoneWithPath()
+                {
+                    if(Agent.remainingDistance <= Agent.stoppingDistance)
+                    {
+                        executingPlayerState = ExecutingPlayerState.IDLE;
+                    }
+                }
+            }
+            </code></pre>
+            <p><strong>Purpose:</strong> Manages the player's state machine and input. Handles initialization of states, transitions between states, and player-specific behavior.</p>
+            <p><strong>Methods:</strong></p>
+            <ul>
+                <li><code>Start()</code>: Sets the default state to idle.</li>
+                <li><code>Update()</code>: Calls the base <code>Update</code> method to update the current state.</li>
+                <li><code>SwitchState(IStates&lt;PlayerController&gt; nextState)</code>: Overrides the base method to switch player states.</li>
+                <li><code>DoneWithPath()</code>: Only gets called if the current state is <code>PWalkState</code>. Checks if the player has reached their destination, thus allowing to switch from <code>PWalkState</code> to <code>PIdleState</code>.</li>
+            </ul>
+            <p><strong>Highlights:</strong></p>
+            <ul>
+                <li><strong>State Management:</strong> Manages multiple player states and transitions. Each state is responsible for its own work and can only be transitioned to certain states under certain conditions.</li>
+                <li><strong>Event Handling:</strong> Uses Unity's <code>UnityEvent</code> system to handle state-specific actions.</li>
+            </ul>
+            
+            <h2 id="conclusion">Conclusion</h2>
+            <p>
+                This FSM system is designed with flexibility and scalability in mind, providing a robust foundation for managing state-based behaviors in a game. Its modular design allows for easy extension and adaptation to various game objects, demonstrating advanced object-oriented principles suitable for any game development scenario.
+            </p>
+    </section><!-- End Portfolio Details Section -->
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="top-button" id="topButton">
+        <i class="bx bx-chevron-up"></i>
+    </a>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>beyzanur ozen Wave Function Collapse Generator (For Procedural Level Generation)</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <!--Syntax Highlighting/Prim.js -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+
+  <style>
+    /* Top Button Styles */
+    .top-button {
+        position: fixed;
+        bottom: 20px; /* Ekranın altından mesafe */
+        right: 20px; /* Ekranın sağından mesafe */
+        background-color: #007bff; /* Butonun arka plan rengi */
+        color: white; /* Butonun yazı rengi */
+        border-radius: 50%; /* Yuvarlak buton */
+        width: 50px; /* Butonun genişliği */
+        height: 50px; /* Butonun yüksekliği */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 24px; /* İkonun boyutu */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+        transition: background-color 0.3s; /* Renk değişimi efekti */
+        display: none; /* Başlangıçta gizle */
+    }
+
+    .top-button:hover {
+        background-color: #0056b3; /* Üzerine gelindiğinde arka plan rengi */
+    }
+
+    .top-button i {
+        margin: 0; /* İkonun etrafındaki boşluğu kaldırır */
+    }
+</style>
+
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Beyzanur Özen</a></h1>
+        <div class="social-links mt-3 text-center">
+            <a href="https://github.com/Lucid-Karma" class="github"><i class="bx bxl-github"></i></a>
+            <a href="https://www.instagram.com/kodadika/" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/beyzanur-%C3%B6zen-9632b6200/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+            <li><a href="WfcGeneratorCodes.html" class="nav-link scrollto"><i class="bx bx-code-block"></i> <span>WfcGenerator Codes</span></a></li>
+            <li><a href="CellSOCodes.html" class="nav-link scrollto"><i class="bx bx-code-block"></i> <span>CellSO Codes</span></a></li>
+            <li><a href="ModuleSOCodes.html" class="nav-link scrollto"><i class="bx bx-code-block"></i> <span>ModuleSO Codes</span></a></li>
+            <li><a href="EventManagerCodes.html" class="nav-link scrollto"><i class="bx bx-code-block"></i> <span>EventManager Codes</span></a></li>
+            <li><a href="Docs.html" class="nav-link scrollto"><i class="bx bx-book"></i> <span>Docs</span></a></li>
+            <li><a href="PlayCivicConnect.html" class="nav-link scrollto"><i class="bx bx-play-circle"></i> <span>PLAY GAME</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h2>Procedural Level Generation</h2>
+                <h5>(Wave Function Collapse Generator)</h5>
+              </div>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="PlayCivicConnect.html">Play / Test </a></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+            <h2>Overview</h2>
+                <p>WFC generator is created as a solid example of a fully architectured system. Below, you can see how each method 
+                    contributes to the overall functionality of the wave function collapse algorithm. This approach ensures a modular, 
+                    efficient, and expandable system for procedural level generation.</p>
+        
+            <div class="toc">
+
+                <h2>Table of Contents</h2>
+                <ul>
+                    <li><a href="#keyCharacteristicsOfTheWFCSystem">Key Characteristics of The WFC System</a></li>
+                    <li><a href="#codeExplanationWfcGenerator">Code Explanation (WfcGenerator)</a></li>
+                    <ul>
+                        <li><a href="#classAndVariablesSetup">Class and Variables Setup</a></li>
+                        <li><a href="#eventListenersSetup">Event Listeners Setup</a></li>
+                        <li><a href="#levelRecreation">Level Recreation</a></li>
+                        <li><a href="#gridGenerationAndInitialization">Grid Generation and Initialization</a></li>
+                        <li><a href="#startingTheWaveFunctionCollapse">Starting the Wave Function Collapse</a></li>
+                        <li><a href="#findingAndCollapsingTheGridCells">Finding and Collapsing the Grid Cells</a></li>
+                        <li><a href="#updatingCellsAndMatchingModules">Updating Cells and Matching Modules</a></li>
+                        <li><a href="#finalizingTheCollapse">Finalizing the Collapse</a></li>
+                    </ul>
+                    <li><a href="#otherScripts">Other Scripts</a></li>
+                    <ul>
+                        <li><a href="#cellSO">CellSO</a></li>
+                        <li><a href="#moduleSO">ModuleSO</a></li>
+                        <li><a href="#eventManager">EventManager</a></li>
+                    </ul>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </div>
+    
+            <h2 id="keyCharacteristicsOfTheWFCSystem">Key Characteristics of The WFC System</h2>
+            <ol>
+                <li><strong>Separation of Concerns</strong>: 
+                Distinct classes (<code>WfcGenerator</code>, <code>CellSO</code>, <code>ModuleSO</code>) each serving a specific purpose:
+                    <ul>
+                        <li><strong><code>WfcGenerator</code></strong>: Manages the overall process of generating the grid and collapsing cells.</li>
+                        <li><strong><code>CellSO</code></strong>: Represents individual cells in the grid, each with its potential modules and state.</li>
+                        <li><strong><code>ModuleSO</code></strong>: Represents the modules that can occupy cells, including their connections and properties.</li>
+                    </ul>
+                </li>
+                <li><strong>Data Management</strong>: 
+                    Using ScriptableObjects (<code>CellSO</code>, <code>ModuleSO</code>) to store cell and module data makes the system modular and allows easy configuration and extension without changing the code.
+                </li>
+                <li><strong>Modularity and Extensibility</strong>: 
+                    The system is modular, allowing new modules and cells to be added by creating new ScriptableObjects. This is a sign of good software architecture, making the system easily extensible and maintainable.
+                </li>
+                <li><strong>Encapsulation and Reusability</strong>: 
+                    The generator encapsulates the WFC algorithm logic, including initialization, neighbor checking, entropy calculation, and cell collapsing. This makes the code reusable for generating different types of levels or maps.
+                </li>
+                <li><strong>Event-Driven Architecture</strong>: 
+                    Using <code>UnityEvent</code> for events like <code>OnMapReady</code> shows an event-driven architecture, which is helpful in decoupling different parts of the system.
+                </li>
+                <li><strong>Clear Flow and Management</strong>: 
+                    The script has a clear flow: initializing the grid (<code>Generate</code>), starting the collapse (<code>StartWave</code>), managing the collapse (<code>CollapseCell</code>, <code>CollapseGrid</code>), and finding neighbors (<code>FindNeighbors</code>). This clear flow helps in maintaining and understanding the system.
+                </li>
+            </ol>
+    
+            <h2 id="codeExplanationWfcGenerator">Code Explanation (WfcGenerator)</h2>
+            <h3 id="classAndVariablesSetup">Class and Variables Setup</h3>
+            <pre><code class="language-csharp">
+        public class WfcGenerator : MonoBehaviour
+        {
+            [HideInInspector]
+            public List<CellSO> cells = new List<CellSO>();
+            private List<CellSO> candidateCells = new List<CellSO>();
+            public CellSO Cell; // A reference to a CellSO ScriptableObject, which defines possible modules.
+            public int _width;  // Width of the grid.
+            public int _length; // Length of the grid.
+            [SerializeField] private int _moduleSize; // Size of each module.
+        
+            private int firstCollapse; // Index of the first cell to be collapsed.
+            
+            // Other variables...
+        }
+    </code></pre>
+    
+            <h3>Explanation:</h3>
+            <p><strong>Purpose</strong>: The <code>WfcGenerator</code> class is the main driver for the WFC algorithm in Unity. It controls the grid's generation, the collapse process, and the interaction between different cells and modules.</p>
+            <p><strong>Variables</strong>:
+                <ul>
+                    <li><code>cells</code> and <code>candidateCells</code> are lists that store all cells and candidate cells for collapse.</li>
+                    <li><code>Cell</code> is a <code>CellSO</code> (ScriptableObject) that defines possible modules for each cell. <a href="#cellSO">[see]</a></li>
+                    <li><code>_width</code> and <code>_length</code> define the dimensions of the grid.</li>
+                    <li><code>firstCollapse</code> tracks the first cell to be collapsed to start the WFC process.</li>
+                </ul>
+            </p>
+    
+            <h3 id="eventListenersSetup">Event Listeners Setup</h3>
+            <pre><code class="language-csharp">
+        void OnEnable()
+        {
+            EventManager.OnLevelStart.AddListener(GenerateWFC);
+            EventManager.OnLevelInitialize.AddListener(RecreateLevel);
+        }
+        
+        void OnDisable()
+        {
+            EventManager.OnLevelStart.RemoveListener(GenerateWFC);
+            EventManager.OnLevelInitialize.RemoveListener(RecreateLevel);
+        }
+    </code></pre>
+    
+            <h3>Explanation:</h3>
+            <p><strong>Purpose</strong>: These methods manage event listeners, ensuring the appropriate methods are called when specific events occur (like starting or initializing a level).</p>
+            <p><strong><code>OnEnable</code> and <code>OnDisable</code></strong>:
+                <ul>
+                    <li><code>OnEnable</code>: Registers methods (<code>GenerateWFC</code> and <code>RecreateLevel</code>) to respond to events (<code>OnLevelStart</code> and <code>OnLevelInitialize</code>).</li>
+                    <li><code>OnDisable</code>: Unregisters these methods to prevent memory leaks or unintended behavior when the object is disabled or destroyed.</li>
+                </ul>
+            </p>
+    
+            <h3 id="levelRecreation">Level Recreation</h3>
+            <pre><code class="language-csharp">
+        private void RecreateLevel()
+        {
+            cells.Clear();
+            candidateCells.Clear();
+            rotatableObjectTs.Clear();
+            moduleObjects.Clear();
+        
+            Destroy(gridHolder);
+            LevelManager.Instance.StartLevel();
+        }
+    </code></pre>
+    
+            <h3>Explanation:</h3>
+            <p><strong>Purpose</strong>: Resets the grid and clears all data to start fresh. This function is useful when restarting or initializing a new level.</p>
+            <p><strong>Details</strong>:
+                <ul>
+                    <li>Clears all lists to remove previous data and reset the state.</li>
+                    <li>Destroys <code>gridHolder</code>, which is a GameObject that contains all the grid cells.</li>
+                    <li>Calls <code>StartLevel</code> from <code>LevelManager</code> to begin the level setup process anew.</li>
+                </ul>
+            </p>
+    
+            <h3 id="gridGenerationAndInitialization">Grid Generation and Initialization</h3>
+            <pre><code class="language-csharp">
+        public void GenerateWFC()
+        {
+            Generate();
+            StartWave();
+            CollapseGrid();
+        }
+        
+        private void Generate()
+        {
+            CellSO originalCell = Cell;
+        
+            for (int row = 0; row < _width; row++)
+            {
+                for (int col = 0; col < _length; col++)
+                {
+                    CellSO cell = ScriptableObject.CreateInstance<CellSO>();
+                    cell.modules = new List<ModuleSO>(originalCell.modules);
+                    cell.cellPos = new Vector3(row * _moduleSize, 0, col * _moduleSize * -1);
+                    cell.Row = row;
+                    cell.Column = col;
+        
+                    cells.Add(cell);
+                }
+            }
+        }
+    </code></pre>
+    
+            <h3>Explanation:</h3>
+            <p><strong>Purpose</strong>: These methods are responsible for generating the grid of cells and initializing the WFC process.</p>
+            <p><strong><code>GenerateWFC</code></strong>: Orchestrates the generation, starting the wave, and collapsing the grid.</p>
+            <p><strong><code>Generate</code></strong>:
+                <ul>
+                    <li>Iterates over a grid size defined by <code>_width</code> and <code>_length</code>.</li>
+                    <li>Creates new <code>CellSO</code> instances for each position in the grid.</li>
+                    <li>Copies modules from the <code>originalCell</code> (a predefined <code>CellSO</code>) to each new cell, setting its position and grid coordinates.</li>
+                </ul>
+            </p>
+    
+            <h3 id="startingTheWaveFunctionCollapse">Starting the Wave Function Collapse</h3>
+            <pre><code class="language-csharp">
+        private void StartWave()
+        {
+            firstCollapse = cells.Count / 2;
+            
+            cells[firstCollapse].isCollapsed = true;
+            int starterModule = Random.Range(0, cells[firstCollapse].modules.Count);
+        
+            cells[firstCollapse].modules.RemoveAll(module => module != cells[firstCollapse].modules[starterModule]);
+            cells[firstCollapse].modules[0].moduleUsageCount++;
+            prefabRotation = cells[firstCollapse].modules[0].modulePrefab.transform.rotation;
+            GameObject obj = Instantiate(cells[firstCollapse].modules[0].modulePrefab, cells[firstCollapse].cellPos, prefabRotation);
+        
+            moduleObject = obj.GetComponent<ModuleObject>();
+            if (moduleObject != null)
+            {
+                moduleObject.Row = cells[firstCollapse].Row;
+                moduleObject.Column = cells[firstCollapse].Column;
+                moduleObjects.Add(moduleObject);
+            }
+        
+            ListRotatableMOTransforms(cells[firstCollapse].modules[0], obj.transform);
+        
+            gridHolder = Instantiate(emptyObject);
+            gridHolder.transform.position = obj.transform.position;
+            obj.transform.SetParent(gridHolder.transform);
+        }
+    </code></pre>
+    
+            <h3>Explanation:</h3>
+            <p><strong>Purpose</strong>: Initializes the wave collapse by randomly selecting a module for the first cell and setting it up in the grid.</p>
+            <p><strong>Details</strong>:
+                <ul>
+                    <li><code>firstCollapse</code>: Starts collapsing from the middle of the grid (<code>cells.Count / 2</code>).</li>
+                    <li>Random Module Selection: Randomly selects a module for the first cell and removes all other modules that are not selected.</li>
+                    <li>Instantiation: Instantiates the selected module's prefab at the cell's position with its rotation.</li>
+                    <li>Grid Holder Setup: Creates a <code>gridHolder</code> GameObject to manage the positioning of all grid cells collectively.</li>
+                </ul>
+            </p>
+    
+            <h3 id="findingAndCollapsingTheGridCells">Finding and Collapsing the Grid Cells</h3>
+            <pre><code class="language-csharp">
+        private void FindNeighbors(CellSO cell)
+        {
+            _row = cell.Row;
+            _col = cell.Column;
+        
+            // Check each direction (North, South, East, West) and add valid neighbors to candidateCells...
+        }
+        
+        private CellSO FindLowestEntropy()
+        {
+            int lowestModuleCount = candidateCells.Min(list => list.modules.Count); 
+        
+            var lowestEntropies = candidateCells.Where(num => num.modules.Count == lowestModuleCount).ToList();
+        
+            if (lowestEntropies.Count > 1)
+            {
+                lowestEntropyValue = lowestEntropies.Min(x => x.entropy);
+                var lowestEntropyValues = lowestEntropies.Where(entropyValue => entropyValue.entropy == lowestEntropyValue).ToList();
+        
+                return lowestEntropyValues.Count > 1 
+                    ? lowestEntropyValues[Random.Range(0, lowestEntropyValues.Count)] 
+                    : lowestEntropyValues[0];
+            }
+            else
+            {
+                return lowestEntropies[0];
+            }
+        }
+    </code></pre>
+    
+            <h3>Explanation:</h3>
+            <p><strong>Purpose</strong>: These methods are essential for determining the next cell to collapse based on their entropy and updating their states accordingly.</p>
+            <p><strong><code>FindNeighbors</code></strong>:
+                <ul>
+                    <li>Searches for valid neighbor cells around a given cell (<code>North</code>, <code>South</code>, <code>East</code>, <code>West</code>) that have not yet collapsed.</li>
+                    <li>Adds valid neighbors to the <code>candidateCells</code> list for potential collapse.</li>
+                </ul>
+            </p>
+            <p><strong><code>FindLowestEntropy</code></strong>:
+                <ul>
+                    <li>Finds the cell with the lowest entropy (the fewest possible modules) among the <code>candidateCells</code>.</li>
+                    <li>If multiple cells have the same lowest entropy, it randomly selects one to add variety and avoid deterministic patterns in the grid generation.</li>
+                </ul>
+            </p>
+    
+            <h3 id="updatingCellsAndMatchingModules">Updating Cells and Matching Modules</h3>
+            <pre><code class="language-csharp">
+        private void UpdateCell(int direction, CellSO neighborCell, CellSO cell)
+        {
+            // direction: 0 = North, 1 = South, 2 = East, 3 = West
+        
+            neighborCell.modules.RemoveAll(possibleModule => !IsMatching(direction, possibleModule, cell.modules[0]));
+        
+            neighborCell.entropy = neighborCell.modules.Sum(x => x.moduleUsageCount);
+        }
+        
+        private bool IsMatching(int direction, ModuleSO neighborModule, ModuleSO cellModule)
+        {
+            if (direction == 0) // North
+                return neighborModule.south == cellModule.north;
+        
+            if (direction == 1) // South
+                return neighborModule.north == cellModule.south;
+        
+            if (direction == 2) // East
+                return neighborModule.west == cellModule.east;
+        
+            if (direction == 3) // West
+                return neighborModule.east == cellModule.west;
+        
+            return false;
+        }
+    </code></pre>
+    
+            <h3>Explanation:</h3>
+            <p><strong>Purpose</strong>: These methods are used to refine the possible modules for each cell based on its neighbors, ensuring that the modules match correctly according to predefined rules.</p>
+            <p><strong><code>UpdateCell</code></strong>:
+                <ul>
+                    <li>Filters out modules in a neighboring cell that do not match the module in the currently collapsed cell.</li>
+                    <li>Recalculates the entropy of the neighboring cell after possible modules have been removed.</li>
+                </ul>
+            </p>
+            <p><strong><code>IsMatching</code></strong>:
+                <ul>
+                    <li>Checks if a module in a neighboring cell matches the module in the current cell based on their edges (<code>north</code>, <code>south</code>, <code>east</code>, <code>west</code>).</li>
+                </ul>
+            </p>
+    
+            <h3 id="finalizingTheCollapse">Finalizing the Collapse</h3>
+            <pre><code class="language-csharp">
+        public void CollapseGrid()
+        {
+            while (candidateCells.Any(cell => !cell.isCollapsed))
+            {
+                var cellToCollapse = FindLowestEntropy();
+                cellToCollapse.isCollapsed = true;
+        
+                // Continue the collapse process by selecting and instantiating modules as in StartWave...
+            }
+        
+            AnnounceMapReady();
+        }
+        
+        private void AnnounceMapReady()
+        {
+            EventManager.OnMapReady.Invoke();
+        }
+    </code></pre>
+    
+            <h3>Explanation:</h3>
+            <p><strong>Purpose</strong>: Manages the collapse of all cells in the grid until no more cells are left uncollapsed, finalizing the procedural generation process.</p>
+            <p><strong>Details</strong>:
+                <ul>
+                    <li><code>CollapseGrid</code>: Continuously collapses cells with the lowest entropy, reducing the possible states in each step.</li>
+                    <li><code>AnnounceMapReady</code>: Invokes an event to signal that the map generation is complete, allowing other systems to proceed.</li>
+                </ul>
+            </p>
+    
+            <h2 id="otherScripts">Other Scripts</h2>
+            <h3 id="cellSO">CellSO</h3>
+            <pre><code class="language-csharp">
+        using System.Collections.Generic;
+        using UnityEngine;
+        
+        [CreateAssetMenu(menuName = "WFC/CellSO")]
+        public class CellSO : ScriptableObject 
+        {
+            public List<ModuleSO> modules = new List<ModuleSO>();
+            [HideInInspector] public Vector3 cellPos;
+            public bool isCollapsed = false;
+            [HideInInspector] public int entropy = 0;
+        
+            public int Row { get; set; }
+            public int Column { get; set; }
+        
+            private void OnDisable()
+            {
+                isCollapsed = false;
+                entropy = 0;
+            }
+        }
+    </code></pre>
+    
+            <h3 id="moduleSO">ModuleSO</h3>
+            <pre><code class="language-csharp">
+        using System.Collections.Generic;
+        using UnityEngine;
+        
+        [CreateAssetMenu(menuName = "WFC/ModuleSO")]
+        public class ModuleSO : ScriptableObject 
+        {
+            public GameObject modulePrefab;
+            [HideInInspector] public ModuleObject moduleObject;
+            [Space]
+            public int north;
+            public int south;
+            public int east;
+            public int west;
+        
+            [HideInInspector] public int moduleUsageCount = 0;
+        
+            [HideInInspector] public List<int> moduleType = new List<int>();
+        
+            private void OnEnable()
+            {
+                moduleType.Add(north);
+                moduleType.Add(south);
+                moduleType.Add(east);
+                moduleType.Add(west);
+        
+                moduleObject = modulePrefab.GetComponent<ModuleObject>();
+                if (moduleObject != null)
+                {
+                    moduleObject.north = north;
+                    moduleObject.south = south;
+                    moduleObject.east = east;
+                    moduleObject.west = west;
+                }
+            }
+        
+            void OnDisable()
+            {
+                moduleUsageCount = 0;
+            }
+        }
+    </code></pre>
+    
+            <h3 id="eventManager">EventManager</h3>
+            <pre><code class="language-csharp">
+        using UnityEngine.Events;
+
+        public static class EventManager
+        {
+            public static UnityEvent OnLevelStart = new UnityEvent();
+            public static UnityEvent OnLevelInitialize = new UnityEvent();
+            public static UnityEvent OnMapReady = new UnityEvent();
+
+            // Other event-related methods...
+        }
+    </code></pre>
+    
+            <h2 id="gallery">Gallery</h2>
+            <div class="gallery">
+                <img src="https://github.com/user-attachments/assets/46449fa5-4200-437f-b8f7-6556bcd8ca57" alt=""  width="800"/>
+                <img src="https://github.com/user-attachments/assets/2fc713ad-6c9c-4913-bddf-094dc0a8ac37" alt=""  width="800"/>
+                <img src="https://github.com/user-attachments/assets/29e0bb2c-1c37-427c-8984-265f64f99a8a" alt=""  height="500" id="cellSo"/>
+                <img src="https://github.com/user-attachments/assets/7ece6916-bde7-449f-b4fc-4e0d8256adcc" alt=""  height="400"/>
+                <img src="https://github.com/user-attachments/assets/5c9fd447-007a-4a32-b96e-e5576710bc1e" alt=""  height="400"/>
+            </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="top-button" id="topButton">
+        <i class="bx bx-chevron-up"></i>
+    </a>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

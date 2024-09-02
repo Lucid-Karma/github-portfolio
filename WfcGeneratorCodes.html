@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>beyzanur ozen Wave Function Collapse Generator (For Procedural Level Generation)</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <!--Syntax Highlighting/Prim.js -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+
+  <style>
+    /* Top Button Styles */
+    .top-button {
+        position: fixed;
+        bottom: 20px; /* Ekranın altından mesafe */
+        right: 20px; /* Ekranın sağından mesafe */
+        background-color: #007bff; /* Butonun arka plan rengi */
+        color: white; /* Butonun yazı rengi */
+        border-radius: 50%; /* Yuvarlak buton */
+        width: 50px; /* Butonun genişliği */
+        height: 50px; /* Butonun yüksekliği */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 24px; /* İkonun boyutu */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+        transition: background-color 0.3s; /* Renk değişimi efekti */
+        display: none; /* Başlangıçta gizle */
+    }
+
+    .top-button:hover {
+        background-color: #0056b3; /* Üzerine gelindiğinde arka plan rengi */
+    }
+
+    .top-button i {
+        margin: 0; /* İkonun etrafındaki boşluğu kaldırır */
+    }
+</style>
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Beyzanur Özen</a></h1>
+        <div class="social-links mt-3 text-center">
+            <a href="https://github.com/Lucid-Karma" class="github"><i class="bx bxl-github"></i></a>
+            <a href="https://www.instagram.com/kodadika/" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/beyzanur-%C3%B6zen-9632b6200/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+            <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+            <li><a href="CellSOCodes.html" class="nav-link scrollto"><i class="bx bx-code-block"></i> <span>CellSO Codes</span></a></li>
+            <li><a href="ModuleSOCodes.html" class="nav-link scrollto"><i class="bx bx-code-block"></i> <span>ModuleSO Codes</span></a></li>
+            <li><a href="EventManagerCodes.html" class="nav-link scrollto"><i class="bx bx-code-block"></i> <span>EventManager Codes</span></a></li>
+            <li><a href="Docs.html" class="nav-link scrollto"><i class="bx bx-book"></i> <span>Docs</span></a></li>
+            <li><a href="PlayCivicConnect.html" class="nav-link scrollto"><i class="bx bx-play-circle"></i> <span>PLAY GAME</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+  
+          <div class="d-flex justify-content-between align-items-center">
+            <h2>WfcGenerator Class</h2>
+            <ol>
+              <li><a href="WfcDocumantation.html">Doc</a></li>
+              <li><a href="PlayCivicConnect.html">Play / Test </a></li>
+            </ol>
+          </div>
+  
+        </div>
+      </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <pre><code class="language-csharp">
+  using System.Collections;
+  using System.Collections.Generic;
+  using UnityEngine;
+  using System.Linq;
+  using UnityEngine.Events;
+  
+  public class WfcGenerator : MonoBehaviour
+  {
+      [HideInInspector]
+      public List<CellSO> cells = new List<CellSO> ();
+      private List<CellSO> candidateCells = new List<CellSO>();
+      public CellSO Cell; //.......................A CellSO reference with modules defined.
+      public int _width;
+      public int _length;
+      [SerializeField] private int _moduleSize;
+  
+  
+      private int firstCollapse; //................The index of the first cell to be created in the list.
+      Quaternion prefabRotation;
+  
+      int _row;   
+      int _col;
+  
+      int lowestEntropyValue; //...................Lowest usage value of modules among cells to Find_Lowest_Entropy and to Get_Definite_State.
+      int randomModule; //.........................Selected cell's random module index to Get_Definite_State.
+  
+      [HideInInspector]
+      public GameObject gridHolder; //.............Game object for centering the position of the grid.
+      [SerializeField] 
+      private GameObject emptyObject;
+      [HideInInspector] public List<Transform> rotatableObjectTs = new();
+      public List<ModuleObject> moduleObjects = new();
+      ModuleObject moduleObject;
+  
+      [HideInInspector] public static UnityEvent OnMapReady = new();
+      [HideInInspector] public static UnityEvent OnMapSolve = new();
+  
+      void OnEnable()
+      {
+          EventManager.OnLevelStart.AddListener(GenerateWFC);
+          EventManager.OnLevelInitialize.AddListener(RecreateLevel);
+      }
+      void OnDisable()
+      {
+          EventManager.OnLevelStart.RemoveListener(GenerateWFC);
+          EventManager.OnLevelInitialize.RemoveListener(RecreateLevel);
+      }
+  
+      private void RecreateLevel()
+      {
+          cells.Clear();
+          candidateCells.Clear();
+          rotatableObjectTs.Clear();
+          moduleObjects.Clear();
+  
+          Destroy(gridHolder);
+          LevelManager.Instance.StartLevel();
+      }
+  
+      public void GenerateWFC()
+      {
+          Generate();
+          StartWave();
+          CollapseGrid();
+      }
+  
+      private void StartWave()
+      {
+          firstCollapse = cells.Count / 2;
+          
+          cells[firstCollapse].isCollapsed = true;
+          int starterModule = Random.Range(0, cells[firstCollapse].modules.Count);
+  
+          cells[firstCollapse].modules.RemoveAll(module => module !=cells[firstCollapse].modules[starterModule]); 
+          cells[firstCollapse].modules[0].moduleUsageCount ++;
+          prefabRotation = cells[firstCollapse].modules[0].modulePrefab.transform.rotation;
+          GameObject obj = (GameObject)Instantiate(cells[firstCollapse].modules[0].modulePrefab, cells[firstCollapse].cellPos, prefabRotation);
+  
+          moduleObject = obj.GetComponent<ModuleObject>();
+          if (moduleObject != null)
+          {
+              moduleObject.Row = cells[firstCollapse].Row;
+              moduleObject.Column = cells[firstCollapse].Column;
+              moduleObjects.Add(moduleObject);
+          }
+  
+          ListRotatableMOTransforms(cells[firstCollapse].modules[0], obj.transform);
+  
+          gridHolder = (GameObject)Instantiate(emptyObject);
+          gridHolder.transform.position = obj.transform.position;
+          obj.transform.SetParent(gridHolder.transform);
+      
+      }
+  
+      private void Generate()
+      {
+          CellSO originalCell = Cell;
+  
+          for (int row = 0; row < _width; row++)
+          {
+              for (int col = 0; col < _length; col++)
+              {
+                  CellSO cell = ScriptableObject.CreateInstance<CellSO>();
+                  cell.modules = new List<ModuleSO>(originalCell.modules);
+                  cell.cellPos = new Vector3(row * _moduleSize, 0, col * _moduleSize * -1);   
+                  cell.Row = row;
+                  cell.Column = col;
+  
+                  cells.Add(cell);
+              }
+          }
+      }
+      
+      private void FindNeighbors(CellSO cell)
+      {
+          _row = cell.Row;
+          _col = cell.Column;
+  
+          // North
+          if (_col > 0 )
+          {
+              CellSO northNeighbor = cells.Find(c => c.Column == _col - 1 && c.Row == _row && !c.isCollapsed);
+              if (northNeighbor != null)
+              {
+                  UpdateCell(0, northNeighbor, cell);
+  
+                  if (!candidateCells.Contains(northNeighbor))
+                  {
+                      candidateCells.Add(northNeighbor);
+                  }
+              }
+          }
+  
+          // South
+          if (_col < _length - 1 )
+          {
+              CellSO southNeighbor = cells.Find(c => c.Column == _col + 1 && c.Row == _row && !c.isCollapsed);
+              if (southNeighbor != null)
+              {
+                  UpdateCell(1, southNeighbor, cell);
+  
+                  if (!candidateCells.Contains(southNeighbor))
+                  {
+                      candidateCells.Add(southNeighbor);
+                  }
+              }
+          }
+  
+          // East
+          if (_row < _width - 1 )
+          {
+              CellSO eastNeighbor = cells.Find(c => c.Column == _col && c.Row == _row + 1 && !c.isCollapsed);
+              if (eastNeighbor != null)
+              {
+                  UpdateCell(2, eastNeighbor, cell);
+  
+                  if (!candidateCells.Contains(eastNeighbor))
+                  {
+                      candidateCells.Add(eastNeighbor);
+                  }
+              }
+          }
+  
+          // West
+          if (_row > 0)
+          {
+              CellSO westNeighbor = cells.Find(c => c.Column == _col && c.Row == _row - 1 && !c.isCollapsed);
+              if (westNeighbor != null)
+              {
+                  UpdateCell(3, westNeighbor, cell);
+  
+                  if (!candidateCells.Contains(westNeighbor))
+                  {
+                      candidateCells.Add(westNeighbor);
+                  }
+              }
+          }
+      }
+  
+      private CellSO FindLowestEntropy()
+      {
+          int lowestModuleCount = candidateCells.Min(list => list.modules.Count); 
+  
+          var lowestEntropies = candidateCells.Where(num => num.modules.Count == lowestModuleCount).ToList();
+  
+          if(lowestEntropies.Count > 1)
+          {
+              lowestEntropyValue = lowestEntropies.Min(x => x.entropy);
+              var lowestEntropyValues = lowestEntropies.Where(entropyValue => entropyValue.entropy == lowestEntropyValue).ToList();
+  
+              if(lowestEntropyValues.Count > 1)    return lowestEntropyValues[Random.Range(0, lowestEntropyValues.Count)];
+              else    return lowestEntropies.Find(y => y.entropy == lowestEntropyValue);  // or lowestEntropyValues[0] ...first and only element.
+          }
+          else
+          {
+              return lowestEntropies[0];
+          }
+      }
+  
+      private void UpdateCell(int direction, CellSO neighborCell, CellSO cell)
+      {
+          // 0=north, 1=south, 2=east, 3=west
+  
+          neighborCell.modules.RemoveAll(possibleModule => !IsMatching(direction, possibleModule, cell.modules[0]));  //cell.modules[0] represents the last remaining cell.
+  
+          neighborCell.entropy = neighborCell.modules.Sum(x => x.moduleUsageCount);
+      }
+  
+      private bool IsMatching(int direction, ModuleSO neighborModule, ModuleSO cellModule)
+      {
+          if (direction == 0) // North
+              return neighborModule.south == cellModule.north;
+  
+          if (direction == 1) // South
+              return neighborModule.north == cellModule.south;
+  
+          if (direction == 2) // East
+              return neighborModule.west == cellModule.east;
+  
+          if (direction == 3) // West
+              return neighborModule.east == cellModule.west;
+  
+          return false;
+      }
+  
+      private GameObject GetDefiniteState(CellSO currentCell)
+      {
+          if (currentCell.modules.Count > 0)
+          {   
+              ModuleSO selectedModule;
+              if (currentCell.modules.Where(x => x.moduleUsageCount == lowestEntropyValue).Any())
+              {
+                  selectedModule = currentCell.modules.Find(x => x.moduleUsageCount == lowestEntropyValue);
+              }
+              else
+              {
+                  randomModule = Random.Range(0, currentCell.modules.Count);
+                  selectedModule = currentCell.modules[randomModule];
+              }
+  
+              currentCell.modules.RemoveAll(module => module !=selectedModule);
+              
+              if (selectedModule != null)
+              {
+                  GameObject modulePrefab = selectedModule.modulePrefab;
+  
+                  if (modulePrefab != null)
+                  {
+                      selectedModule.moduleUsageCount ++;
+                      prefabRotation = modulePrefab.transform.rotation;
+                      return modulePrefab;
+                  }
+                  else
+                  {
+                      Debug.LogWarning("modulePrefab is not assigned in the selected ModuleSO.");
+                      return null; // or return a default GameObject if you have one.
+                  }
+              }
+              else
+              {
+                  Debug.LogWarning("Selected ModuleSO is null.");
+                  return null; // or return a default GameObject if you have one.
+              }
+          }
+          else
+          {
+              Debug.LogWarning("No modules attached to the current cell.");
+              return null; // or return a default GameObject if you have one.
+          }
+      }
+  
+      private void CollapseCell()
+      {
+          CellSO nextCell;
+          nextCell = FindLowestEntropy();
+          nextCell.isCollapsed = true;
+          GameObject obj = (GameObject)Instantiate(GetDefiniteState(nextCell), nextCell.cellPos, prefabRotation);
+  
+          moduleObject = obj.GetComponent<ModuleObject>();
+          if (moduleObject != null)
+          {
+              moduleObject.Row = nextCell.Row;
+              moduleObject.Column = nextCell.Column;
+              moduleObjects.Add(moduleObject);
+          }
+          
+          ListRotatableMOTransforms(nextCell.modules[0], obj.transform);
+              
+          
+          obj.transform.SetParent(gridHolder.transform);
+          candidateCells.Remove(nextCell);
+  
+          FindNeighbors(nextCell);
+      }
+
+      private void CollapseGrid()
+      {
+          if(cells.Where(x => x.isCollapsed).Any())
+          {
+              var cell = cells.Find(x => x.isCollapsed);
+  
+              FindNeighbors(cell);
+          } 
+  
+          while (cells.Where(x => !x.isCollapsed).Any())
+          {
+              if (candidateCells.Count > 0)
+              {
+                  CollapseCell();
+              }
+              else
+              {
+                  break;
+              }
+          }
+          
+          gridHolder.transform.position = Vector3.zero;
+          Invoke("AnnounceMapReady", 2f);
+      }
+  
+      #region Utility Methods
+      void ListRotatableMOTransforms(ModuleSO module, Transform moduleTransform)
+      {   
+          if (module.north == module.south && module.south == module.east && module.east == module.west)
+          {
+              
+          }
+          else
+          {
+              rotatableObjectTs.Add(moduleTransform);
+          }
+      }
+  
+      void AnnounceMapReady()
+      {
+          OnMapReady.Invoke();
+      }
+      #endregion        
+  }
+    </code></pre>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="top-button" id="topButton">
+        <i class="bx bx-chevron-up"></i>
+    </a>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
