@@ -1138,3 +1138,21 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+/*-----my videos----*/
+.video-crop {
+  width: 100%;
+  max-width: 250px;     /* ✅ scale down: change this to control size */
+  height: 420px;        /* ✅ visible height (cropped) */
+  overflow: hidden;
+  position: relative;
+  /*border-radius: 8px;   /* optional: smooth corners */
+  /*box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* optional */
+}
+
+.cropped-video {
+  width: 100%;
+  position: absolute;
+  top: -25px;           /* ✅ how much to shift the video up to crop top */
+  /*left: 0;*/
+}

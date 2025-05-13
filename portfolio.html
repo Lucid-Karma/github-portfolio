@@ -49,7 +49,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Some Game Projects</h2>
+          <h2>Recent Game Projects</h2>
         </div>
 
         <div class="row" data-aos="fade-up">
@@ -65,24 +65,30 @@
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-          <!--Meadow Monarch-->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-pc">
+          <!--Docs-->
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-mobile">
             <div class="portfolio-wrap">
-              <h5>Meadow Monarch</h5>
-              <img src="assets/img/portfolio/MeadowMonarch/MMpp.png" class="img-fluid" alt="">
+              <h5>Docs</h5>
+              <img src="assets/img/portfolio/CivicConnect/Splash.png" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/MeadowMonarch/MM0.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Farm Simulation Game (teamwork)"><i class="bx bx-plus"></i></a>
+                <a href="Docs.html" title="More Details"><i class="bx bx-book"></i></a>
               </div>
             </div>
-          </div>
+          </div> -->
           
           <!--Civic Connect-->
           <div class="col-lg-4 col-md-6 portfolio-item filter-mobile">
             <div class="portfolio-wrap">
               <h5>Civic Connect</h5>
-              <img src="assets/img/portfolio/CivicConnect/Splash.png" class="img-fluid" alt="">
+              <div class="video-crop">
+                <video class="cropped-video" autoplay muted loop playsinline>
+                  <source src="assets/videos/civic connect.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/CivicConnect/newest/civicC PlayStore.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Single player / Multiplayer Puzzle Game Inspired by the &quotPipes The Puzzle&quot Game"><i class="bx bx-plus"></i></a>
+                <a href="WfcDocumentation.html" title="Documentation"><i class="bx bx-book"></i></a>
               </div>
             </div>
           </div>
@@ -91,38 +97,122 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
               <h5>Chibi Burger Cafe</h5>
-              <img src="assets/img/portfolio/ChibiR/ExitPanel.png" class="img-fluid" alt="">
+              <video class="img-fluid" autoplay muted loop playsinline>
+                <source src="assets/videos/chibi-burger-cafe.m4a" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/ChibiR/ChibiR newest.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Idle Simulation Game"><i class="bx bx-plus"></i></a>
+                <a href="PlayChibiBurgerCafe.html" title="Play Game"><i class="bx bx-play-circle"></i></a>
+                <a href="https://github.com/Lucid-Karma/Idle-Tycoon-Restaurant/tree/main/Idle%20Restaurant/Assets/Project/%5BGAME%5D/Scripts" title="Scripts"><i class="bx bxl-github"></i></a>
               </div>
             </div>
           </div>
 
-          <!--Skyfall-->
+          <!--Lady Quack-->
           <div class="col-lg-4 col-md-6 portfolio-item filter-pc">
             <div class="portfolio-wrap">
-              <h5>Skyfall</h5>
-              <img src="assets/img/portfolio/Skyfall/s0.png" class="img-fluid" alt="">
+              <h5>Lady Quack</h5>
+              <video class="img-fluid" autoplay muted loop playsinline>
+                <source src="assets/videos/Lady Quack Trailer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/Skyfall/s4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="AI Game Jam (teamwork)"><i class="bx bx-plus"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <!--Past Soviet-->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-pc">
-            <div class="portfolio-wrap">
-              <h5>Past Soviet</h5>
-              <img src="assets/img/portfolio/soviet-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/soviet-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Global Game Jam (teamwork)"><i class="bx bx-plus"></i></a>
+                <a href="assets/img/duck.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="in-game visual"><i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
 
         </div>
-        <br><br><br>
+        <br>
     
+        <section id="civic-connect">
+  <h2>🏙️ Civic Connect</h2>
+  <p>
+     <strong>Tools:</strong> Unity3D, C#, Wave Function Collapse, ScriptableObjects
+  </p>
+
+  <p><strong>Overview:</strong><br>
+     <em>Civic Connect</em> is a mobile puzzle game where players repair broken road systems to restore a city’s functionality. In its latest version, the game features a dynamic traffic system that reacts to the player's performance—vehicles begin moving only when a level is solved correctly. These vehicles obey traffic lights and navigate based on player-constructed paths, creating a believable and responsive city environment.
+  </p>
+
+  <p><strong>Key Features:</strong></p>
+  <ul>
+    <li><strong>Dynamic Traffic System:</strong> Cars respond to level completion, using NavMesh and in-game logic to navigate the city.</li>
+    <li><strong>Traffic Lights:</strong> Visual and functional elements that control intersections, adding realism to the traffic behavior.</li>
+    <li><strong>Procedural Generation:</strong> Each level is generated using a custom Wave Function Collapse-based system for scalable, varied content.</li>
+  </ul>
+
+  <p>
+    <strong>Technical Documentation:</strong><br>
+    Detailed explanation of the procedural generation system, including its cell and module structure, can be found 
+    <a href="https://lucid-karma.github.io/github-portfolio/WfcDocumentation.html" target="_blank">here</a>.
+  </p>
+</section>
+
+<section id="chibi-burger-cafe">
+  <h2>🍔 Chibi Burger Cafe</h2>
+  <p>
+     <strong>Tools:</strong> Unity3D, C#, ScriptableObjects, Finite State Machine (FSM), Factory, Observer, Singleton, Object Pooling
+  </p>
+
+  <p><strong>Overview:</strong><br>
+    <em>Chibi Burger Cafe</em> is a cozy, chaotic burger-making game where players craft custom burgers in a vibrant, character-driven kitchen. Players can build burgers freely — stacking ingredients in any order, skipping prep, or mastering the perfect grill. The game celebrates creativity and humor while testing players’ timing and organization.
+  </p>
+
+  <p><strong>Key Features:</strong></p>
+  <ul>
+    <li><strong>Dynamic Burger Creation:</strong> Freely stack ingredients — neat or wild — to craft your perfect burger. The game evaluates creativity, completeness, and quality in real-time.</li>
+    <li><strong>Chef Feedback System:</strong> A grumpy but lovable head chef watches your every move and reacts dynamically, adding pressure and personality.</li>
+    <li><strong>Scoring System:</strong> Customers rate your performance each round, offering a fun mix of reward and challenge.</li>
+    <li><strong>Cosmetic Customization:</strong> Players can personalize their character's look, adding flavor to the experience.</li>
+    <li><strong>Mouse-Only Controls:</strong> Click-to-move and click-to-interact mechanics for accessible, intuitive gameplay.</li>
+  </ul>
+
+  <p><strong>Technical Highlights:</strong></p>
+  <ul>
+    <li>Built on robust software architecture using key design patterns:
+      <ul>
+        <li><strong>Finite State Machine:</strong> Manages game states, character behavior, and customer flow efficiently.</li>
+        <li><strong>Factory Pattern:</strong> Dynamically creates interactable objects (ingredients, tools) based on gameplay context.</li>
+        <li><strong>Observer Pattern:</strong> Ensures decoupled, event-driven communication between UI, customer ratings, and chef behavior.</li>
+        <li><strong>Singleton Pattern:</strong> Centralized management of game systems like UI, level flow, and scoring.</li>
+        <li><strong>Object Pooling:</strong> Optimizes performance by reusing frequently spawned objects like ingredients and effects.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>
+    <strong>Code Repository:</strong><br>
+    Explore the full script collection on GitHub 
+    <a href="https://github.com/Lucid-Karma/Idle-Tycoon-Restaurant/tree/main/Idle%20Restaurant/Assets/Project/%5BGAME%5D/Scripts" target="_blank">here</a>.
+  </p>
+</section>
+
+<section id="lady-quack">
+  <h2>🦆 Lady Quack (In Development)</h2>
+  <p>
+     <strong>Tools:</strong> Unity3D, C#, ScriptableObjects, Event-driven architecture, Narrative Scripting
+  </p>
+
+  <p><strong>Overview:</strong><br>
+    <em>Lady Quack</em> is a stylized isometric interactive narrative puzzle game where players guide a mother duck and her ducklings on a journey to a safer place. The game focuses on minimalist storytelling, emotional connection, and decision-based gameplay within a cozy adventure setting.
+  </p>
+
+  <p><strong>Game Identity:</strong><br>
+    A cozy narrative puzzle experience blending humor and emotional depth, seen through the lens of a mother duck's journey with her ducklings. The game combines click-based decision-making with light puzzle-solving and charming interactions.
+  </p>
+
+  <p><strong>Technical Highlights:</strong></p>
+  <ul>
+    <li>Event-driven narrative system for branching decisions</li>
+    <li>ScriptableObject-based customization system for ducklings</li>
+    <li>Modular scene management for episodic level delivery</li>
+  </ul>
+</section>
+
+
+
 
   </main><!-- End #main -->
 
